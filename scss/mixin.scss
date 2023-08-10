@@ -1,0 +1,53 @@
+@mixin flex($justify:space-around, $direction:row){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+}
+@mixin darkButton(){
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #fff;
+    &:hover{
+        background-color: #fff;
+        color: #333;
+        border: #333 solid 1px;
+        transition: .5s;
+    }
+}
+@mixin hide($maxWidth: 1000px, $hideOrShow:none){
+    @media (max-width: $maxWidth){
+        display: $hideOrShow;
+    }
+}
+@mixin changeWidth($maxWidth: 1000px, $width: 100%){
+    @media (max-width: $maxWidth){
+        width: $width;
+    }
+}
+@mixin changeFlexDirection($maxWidth: 1000px, $flexDirection: column, $textAling: start){
+    @media (max-width: $maxWidth){
+        display: flex;
+        flex-direction: $flexDirection;
+        text-align: $textAling;
+    }
+}
+@mixin changePadding($maxWidth: 1000px, $padding: 0 0 0 0){
+    @media (max-width: $maxWidth){
+        padding: $padding;
+    }
+}
+@mixin burgerMenu($maxWidth: 1000px){
+    @media (max-width: $maxWidth){
+        display: block;
+    }
+}
+@mixin addPadding($maxWidth: 1000px, $padding: 0 0 0 0){
+    @media (max-width: $maxWidth){
+        padding: $padding;
+    }
+}
+@mixin changeFontSize($maxWidth: 1000px, $size: 20px){
+    @media (max-width: $maxWidth){
+        font-size: $size;
+    }
+}
